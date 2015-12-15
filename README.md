@@ -42,24 +42,39 @@ $ rm -rf .git/modules/bundle/submodule
 $ rm -rf bundle/submodule
 
 use the function Str('somethings') in insert mode to insert :
+
 console.log('somethings : ' + JSON.stringify(somethings));
+
 in insert mode => <c-R>=Str('somethings')<enter>
 
 cd bundle/vim-jsbeautify/
+
 git submodule update --init --recursive
 
 # para este repositorio
+
 git submodule add https://github.com/scrooloose/nerdtree.git bundle/nerdtree
+
 git submodule add git://github.com/tpope/vim-abolish.git bundle/vim-abolish
+
 git submodule add git://github.com/tpope/vim-fugitive.git bundle/vim-fugitive
+
 git submodule add https://github.com/pangloss/vim-javascript.git bundle/vim-javascript
+
 git submodule add https://github.com/jelera/vim-javascript-syntax.git bundle/vim-javascript-syntax
+
 git submodule add https://github.com/maksimr/vim-jsbeautify.git bundle/vim-jsbeautify
+
 cd bundle/vim-jsbeautify/
+
 git submodule update --init --recursive
+
 vim .editorconfig
+
 cd bundle/vim-jsbeautify/
-./urchin test/vim
+
 ./urchin -f test/vim
+
 cd ../..
+
 git submodule foreach git pull origin master
